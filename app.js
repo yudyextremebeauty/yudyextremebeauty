@@ -1,10 +1,19 @@
 // ===== Business info =====
-const PHONE_E164 = "+14014998644";
+const PHONE_DISPLAY = "(401) 499-9364";
 const EMAIL = "vivirgirl@icloud.com";
 
-// If the IG/FB usernames are different, change these:
+// Social handles (change if needed)
 const IG_HANDLE = "YudyExtremeBeauty";
 const FB_HANDLE = "YudyExtremeBeauty";
+
+// Booking (Square) — using the username you gave
+// If this exact link doesn't work, replace with the real Square booking link from Square Dashboard.
+const BOOKING_URL = "https://squareup.com/appointments/book/yudyextremebeauty";
+
+// Optional: store links (replace later with real shop links)
+const STORE_LINK_1 = "#";
+const STORE_LINK_2 = "#";
+const STORE_LINK_3 = "#";
 
 // ===== Services =====
 const SERVICES = [
@@ -35,12 +44,6 @@ const SERVICES = [
 const money = (n) => `$${Number(n).toFixed(0)}`;
 
 function serviceHTML(s) {
-  const smsBody = encodeURIComponent(`Hola! Quiero reservar: ${s.name} (${money(s.price)} - ${s.duration}).`);
-  const mailSubject = encodeURIComponent(`Reserva - ${s.name}`);
-  const mailBody = encodeURIComponent(
-    `Hola!\n\nQuiero reservar:\n- Servicio: ${s.name}\n- Precio: ${money(s.price)}\n- Duración: ${s.duration}\n\nGracias!`
-  );
-
   return `
     <article class="service">
       <h3 class="service__name">${s.name}</h3>
@@ -48,10 +51,12 @@ function serviceHTML(s) {
         <span class="badge">⏱ ${s.duration}</span>
         <span class="badge">💲 <span class="price">${money(s.price)}</span></span>
       </div>
+
+      <!-- Only booking button (no call/email/text per service) -->
       <div class="service__actions">
-        <a class="mini" href="tel:${PHONE_E164}">📞 Llamar</a>
-        <a class="mini" href="sms:${PHONE_E164}?&body=${smsBody}">💬 Texto</a>
-        <a class="mini" href="mailto:${EMAIL}?subject=${mailSubject}&body=${mailBody}">✉️ Email</a>
+        <a class="mini" href="${BOOKING_URL}" target="_blank" rel="noopener">
+          📅 Book this service
+        </a>
       </div>
     </article>
   `;
@@ -81,6 +86,20 @@ const fbUrl = `https://www.facebook.com/${FB_HANDLE}`;
   const el = document.getElementById(id);
   if (el) { el.href = fbUrl; el.textContent = `Facebook: ${FB_HANDLE}`; }
 });
+
+// Booking buttons (top/card/bottom)
+["bookBtnTop", "bookBtnCard", "bookBtnBottom"].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) el.href = BOOKING_URL;
+});
+
+// Store buttons (optional)
+const s1 = document.getElementById("storeBtn1");
+const s2 = document.getElementById("storeBtn2");
+const s3 = document.getElementById("storeBtn3");
+if (s1) s1.href = STORE_LINK_1;
+if (s2) s2.href = STORE_LINK_2;
+if (s3) s3.href = STORE_LINK_3;
 
 // Search
 const search = document.getElementById("search");
