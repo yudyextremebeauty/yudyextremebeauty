@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YudyExtremeBeauty | Servicios & Precios</title>
+  <meta name="description" content="YudyExtremeBeauty - Servicios de cejas, micropigmentación, microblading y depilación. Reserva por llamada o email." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <div class="brand">
+        <div class="logo">Y</div>
+        <div>
+          <div class="brand__name">YudyExtremeBeauty</div>
+          <div class="brand__tag">Cejas • Depilación • Micropigmentación</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#servicios">Servicios</a>
+        <a href="#galeria">Galería</a>
+        <a href="#historia">Historia</a>
+        <a href="#tienda">Tienda</a>
+        <a href="#contacto" class="nav__cta">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__left">
+          <h1>Beauty Studio</h1>
+          <p>
+            Servicios profesionales de cejas, depilación y micropigmentación.
+            Mira precios, tiempos y reserva rápido.
+          </p>
+
+          <div class="actions">
+            <a class="btn btn--primary" href="tel:+14014998644">📞 Llamar</a>
+            <a class="btn btn--ghost" href="sms:+14014998644">💬 Texto</a>
+            <a class="btn btn--ghost" href="mailto:vivirgirl@icloud.com">✉️ Email</a>
+          </div>
+
+          <div class="social">
+            <a id="igLink" target="_blank" rel="noopener">Instagram</a>
+            <a id="fbLink" target="_blank" rel="noopener">Facebook</a>
+          </div>
+        </div>
+
+        <div class="hero__right">
+          <div class="card">
+            <div class="card__title">Información</div>
+            <div class="row">
+              <span class="muted">Negocio</span>
+              <span class="strong">YudyExtremeBeauty</span>
+            </div>
+            <div class="row">
+              <span class="muted">Teléfono</span>
+              <a class="strong" href="tel:+14014998644">(401) 499-8644</a>
+            </div>
+            <div class="row">
+              <span class="muted">Email</span>
+              <a class="strong" href="mailto:vivirgirl@icloud.com">vivirgirl@icloud.com</a>
+            </div>
+            <div class="row">
+              <span class="muted">Reserva</span>
+              <span class="strong">Por llamada / texto / email</span>
+            </div>
+
+            <div class="notice">
+              Tip: si luego consigues un link de Booksy/Fresha/Square,
+              aquí pongo un botón “Book Now”.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="servicios">
+      <div class="container">
+        <div class="section__head">
+          <h2>📆 Precios</h2>
+          <p class="muted">Busca un servicio: “cejas”, “depilación”, “microblading”…</p>
+
+          <div class="searchbar">
+            <input id="search" type="search" placeholder="Buscar servicio..." />
+            <button id="clear" class="btn btn--ghost" type="button">Limpiar</button>
+          </div>
+        </div>
+
+        <div id="servicesGrid" class="grid" aria-live="polite"></div>
+
+        <div class="note">
+          <b>Nota:</b> Los tiempos son aproximados. Para confirmar disponibilidad, llama o envía email.
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section section--soft" id="galeria">
+      <div class="container">
+        <div class="section__head">
+          <h2>📸 Galería</h2>
+          <p class="muted">
+            Aquí van fotos (before/after). Cuando tengas imágenes, súbelas a la carpeta <code>assets/</code>
+            y reemplaza los cuadros.
+          </p>
+        </div>
+
+        <div class="gallery">
+          <div class="ph">Sube: assets/photo1.jpg</div>
+          <div class="ph">Sube: assets/photo2.jpg</div>
+          <div class="ph">Sube: assets/photo3.jpg</div>
+          <div class="ph">Sube: assets/photo4.jpg</div>
+        </div>
+
+        <!-- Example (when you have images):
+        <div class="gallery">
+          <img src="assets/photo1.jpg" alt="Trabajo 1" />
+          <img src="assets/photo2.jpg" alt="Trabajo 2" />
+          <img src="assets/photo3.jpg" alt="Trabajo 3" />
+          <img src="assets/photo4.jpg" alt="Trabajo 4" />
+        </div>
+        -->
+      </div>
+    </section>
+
+    <!-- ABOUT / HISTORY -->
+    <section class="section" id="historia">
+      <div class="container about">
+        <div>
+          <h2>💗 Historia</h2>
+          <p class="muted">
+            (Edita este texto) Cuenta quién es Yudy, cuántos años de experiencia tiene,
+            qué estilo le gusta, y qué la hace diferente.
+          </p>
+          <ul class="bullets">
+            <li>Atención personalizada</li>
+            <li>Detalles limpios y naturales</li>
+            <li>Servicios con tiempos y precios claros</li>
+          </ul>
+        </div>
+
+        <div class="card card--outline">
+          <div class="card__title">Políticas (opcional)</div>
+          <p class="muted">
+            Puedes agregar políticas como: cancelaciones, depósitos, puntualidad,
+            y no-shows. Esto reduce problemas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORE -->
+    <section class="section section--soft" id="tienda">
+      <div class="container">
+        <div class="section__head">
+          <h2>🛍️ Tienda</h2>
+          <p class="muted">
+            GitHub/Replit pueden mostrar productos, pero pagos reales requieren un link de tienda
+            (Shopify/Square/Stripe). Aquí lo dejamos listo.
+          </p>
+        </div>
+
+        <div class="store">
+          <div class="product">
+            <div class="product__img">Producto 1</div>
+            <div class="product__name">Lash / Brow Aftercare (ejemplo)</div>
+            <div class="product__price">$0</div>
+            <a class="btn btn--primary btn--small" href="#contacto">Comprar (link)</a>
+          </div>
+
+          <div class="product">
+            <div class="product__img">Producto 2</div>
+            <div class="product__name">Mascarilla / Skincare (ejemplo)</div>
+            <div class="product__price">$0</div>
+            <a class="btn btn--primary btn--small" href="#contacto">Comprar (link)</a>
+          </div>
+
+          <div class="product">
+            <div class="product__img">Producto 3</div>
+            <div class="product__name">Gift Card (ejemplo)</div>
+            <div class="product__price">$0</div>
+            <a class="btn btn--primary btn--small" href="#contacto">Comprar (link)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contacto">
+      <div class="container contact">
+        <div>
+          <h2>Contacto</h2>
+          <p class="muted">Reserva por llamada, texto o email.</p>
+
+          <div class="actions">
+            <a class="btn btn--primary" href="tel:+14014998644">📞 Llamar</a>
+            <a class="btn btn--ghost" href="sms:+14014998644">💬 Texto</a>
+            <a class="btn btn--ghost" href="mailto:vivirgirl@icloud.com">✉️ Email</a>
+          </div>
+
+          <div class="social">
+            <a id="igLink2" target="_blank" rel="noopener">Instagram</a>
+            <a id="fbLink2" target="_blank" rel="noopener">Facebook</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__title">Horario (edítalo)</div>
+          <div class="row"><span class="muted">Lun - Vie</span><span class="strong">10am - 7pm</span></div>
+          <div class="row"><span class="muted">Sábado</span><span class="strong">10am - 5pm</span></div>
+          <div class="row"><span class="muted">Domingo</span><span class="strong">Cerrado</span></div>
+          <div class="notice">Si no quieres mostrar horario, borra esta tarjeta.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> YudyExtremeBeauty</span>
+      <span class="muted">Hecho en blanco & rosado 🎀</span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
